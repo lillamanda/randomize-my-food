@@ -1,0 +1,88 @@
+
+
+
+
+body{
+    background-color: #1c1c1c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dinner-plate div{
+    /* background-color: rgb(161, 212, 183); */
+    background-color: transparent;
+    /* border: 2px solid black; */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.dinner-plate{
+    margin: 30px;
+    background-image: url("/assets/dinnerplate.png");
+    background-repeat: no-repeat;
+    background-size: 600px;
+    padding: 100px;
+    display: grid; 
+    grid-template: 200px 200px 150px / 200px 200px 150px;
+    grid-template-areas: 
+        "protein vegetables ."
+        "carbs vegetables ."
+        ". . sauce";
+    font-weight: bold;
+    text-shadow: 
+        0 0 1em white, 
+        0 0 1em white,
+        0 0 0.2em white,
+        0 0 0.2em white;
+    
+}
+
+#protein-el{
+    grid-area: protein;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+    background-position: bottom left;
+
+    padding: 3em 1em 1em 3em;
+
+    /* justify-content: end;
+    align-items: end; */
+}
+
+#vegetables-el{
+    grid-area: vegetables;
+    border-left: 2px solid black;
+
+    background-position: right;
+
+    padding: 1em 3em 1em 1em;
+
+    /* align-items: center; */
+}
+
+#carbs-el{
+    grid-area: carbs;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+
+    background-position: bottom left;
+
+    padding: 1em 1em 3em 3em;
+
+
+    /* justify-content: end;
+    align-items: start; */
+}
+
+#sauce-el{
+    grid-area: sauce;
+    border: 2px solid black;
+    border-radius: 100%;
+    background-color: whitesmoke;
+
+    padding: 1em;
+
+}
